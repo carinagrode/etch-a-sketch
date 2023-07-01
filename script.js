@@ -1,18 +1,8 @@
-const gridContainer = document.querySelector('#grid-container');
-
-
-
-
+const grid = document.querySelector('#grid');
 
 for (let i = 0; i < 256; i++) {
     const box = document.createElement('div');
     box.className = 'box';
-    gridContainer.appendChild(box);
+    grid.appendChild(box);
 }
-
-// for (let i = 0; i <= 16; i++) {
-//     const box = document.createElement('div');
-//     box.className = 'box';
-//     gridContainer.appendChild(box);
-// }
 

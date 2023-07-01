@@ -10,7 +10,7 @@ body {
     align-items: center;
 }
 
-#grid-container {
+#grid {
     background-color: beige;
     margin-top: 56px;
     width: 640px;
