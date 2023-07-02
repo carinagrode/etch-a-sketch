@@ -41,7 +41,6 @@ body {
 #new-button:hover,
 #reset-button:hover {
     background-color: rgb(86, 229, 222);
-    border: rgb(86, 229, 222) 6px solid;
     color: beige;
 }
 

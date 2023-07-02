@@ -8,18 +8,6 @@ newButton.addEventListener('click', createNewGrid);
 const resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', resetGrid);
 
-function createNewGrid() {
-    const newWidth = getNewGridWidth();
-    removeGrid();
-    createGrid(newWidth);
-}
-
-function resetGrid() {
-    const pixels = document.querySelectorAll('.pixel');
-    pixels.forEach(pixel => {
-        pixel.style.backgroundColor = 'beige';
-    });
-}
 
 function createGrid(sideSquares) {
     for (let i = 0; i < (sideSquares * sideSquares); i++) {
@@ -39,11 +27,19 @@ function createGrid(sideSquares) {
     }
 }
 
-function removeGrid() {
 
-    while (grid.firstChild) {
-        grid.removeChild(grid.lastChild);
-    }
+function resetGrid() {
+    const pixels = document.querySelectorAll('.pixel');
+    pixels.forEach(pixel => {
+        pixel.style.backgroundColor = 'beige';
+    });
+}
+
+
+function createNewGrid() {
+    const newWidth = getNewGridWidth();
+    removeGrid();
+    createGrid(newWidth);
 }
 
 function getNewGridWidth() {
@@ -56,3 +52,12 @@ function getNewGridWidth() {
         return newGridWidth;
     }
 }
+
+function removeGrid() {
+
+    while (grid.firstChild) {
+        grid.removeChild(grid.lastChild);
+    }
+}
+
+
