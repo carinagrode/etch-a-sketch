@@ -6,11 +6,7 @@ for (let i = 0; i < 256; i++) {
     box.className = 'box';
 
     box.addEventListener('mouseenter', () => {
-        box.style.backgroundColor = 'blue';
-    });
-    
-    box.addEventListener('mouseleave', () => {
-        box.style.backgroundColor = 'pink';
+        box.style.backgroundColor = 'rgb(86, 229, 222)';
     });
 }
 

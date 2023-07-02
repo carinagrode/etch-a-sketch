@@ -11,7 +11,7 @@ body {
 }
 
 #grid {
-    background-color:rgb(86, 229, 222);
+    border: 2px solid rgb(255, 192, 247);
     margin-top: 56px;
     width: 640px;
     height: 640px;
@@ -21,7 +21,6 @@ body {
 }
 
 .box {
-    border: 2px solid white;
     width: 40px;
     height: 40px;
 }
