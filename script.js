@@ -43,14 +43,14 @@ function createNewGrid() {
 }
 
 function getNewGridWidth() {
-    let newGridWidth = prompt('How many squares do you want your new canvas to have per side?', '60');
+    let newGridWidth = prompt('How many squares do you want per side?\nEnter a number between 3 and 100 :)');
 
-    if (newGridWidth < 3 || newGridWidth > 100) {
-        const fixedNewGridWidth = prompt ("Let's choose a number between 3 and 100 for a nice canvas :)", "70");
-        return fixedNewGridWidth;
-    } else {
-        return newGridWidth;
+    while (newGridWidth === null || newGridWidth === '' || newGridWidth < 3 || newGridWidth > 100) {
+        newGridWidth = prompt ("Let's choose a number between 3 and 100 for a nice canvas :)");
     }
+    
+    return newGridWidth;
+    
 }
 
 function removeGrid() {
