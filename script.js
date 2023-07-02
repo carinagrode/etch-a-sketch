@@ -2,8 +2,11 @@ const grid = document.querySelector('#grid');
 
 createGrid(16);
 
-const newButton = document.getElementById('newbutton');
+const newButton = document.getElementById('new-button');
 newButton.addEventListener('click', createNewGrid);
+
+const resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', resetGrid);
 
 function createNewGrid() {
     const newWidth = getNewGridWidth();
@@ -11,15 +14,24 @@ function createNewGrid() {
     createGrid(newWidth);
 }
 
+function resetGrid() {
+    const pixels = document.querySelectorAll('.pixel');
+    pixels.forEach(pixel => {
+        pixel.style.backgroundColor = 'beige';
+    });
+}
+
 function createGrid(sideSquares) {
     for (let i = 0; i < (sideSquares * sideSquares); i++) {
         const box = document.createElement('div');
         grid.appendChild(box);
-    
+            
         const boxSize = 640 / sideSquares;
     
         box.style.width = boxSize + 'px';
         box.style.height = boxSize + 'px';
+
+        box.setAttribute('class', 'pixel');
     
         box.addEventListener('mouseenter', () => {
             box.style.backgroundColor = 'rgb(86, 229, 222)';

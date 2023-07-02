@@ -12,17 +12,20 @@ body {
 }
 
 #content {
-    margin: 40px;
+    margin-top: 78px;
     display: flex;
     gap: 40px;;
 }
 
 #buttons {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
-#newbutton {
+#new-button,
+#reset-button {
     background-color: beige;
     border: rgb(86, 229, 222) 5px solid;
     color: rgb(86, 229, 222);
@@ -35,7 +38,8 @@ body {
     cursor: pointer;
 }
 
-#newbutton:hover {
+#new-button:hover,
+#reset-button:hover {
     background-color: rgb(86, 229, 222);
     border: rgb(86, 229, 222) 6px solid;
     color: beige;
