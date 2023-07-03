@@ -66,6 +66,7 @@ function removeGrid() {
     }
 }
 
+
 // Change the favicon color each time the browser is refreshed
 
 const favicon = document.querySelector('link[rel="icon"]');
