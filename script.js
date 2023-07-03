@@ -22,9 +22,18 @@ function createGrid(sideSquares) {
         box.setAttribute('class', 'pixel');
     
         box.addEventListener('mouseenter', () => {
-            box.style.backgroundColor = 'rgb(86, 229, 222)';
+
+            const value1 = getRandomNumber();
+            const value2 = getRandomNumber();
+            const value3 = getRandomNumber();
+
+            box.style.backgroundColor = 'rgb(' + value1 + ', ' + value2 + ', ' + value3 + ')';
         });
     }
+}
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * 256);
 }
 
 
