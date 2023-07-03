@@ -54,7 +54,7 @@ function createNewGrid() {
 function getNewGridWidth() {
     let newGridWidth = prompt('How many squares do you want per side?\nEnter a number between 3 and 100 :)');
 
-    while (newGridWidth === null || newGridWidth === '' || newGridWidth < 3 || newGridWidth > 100) {
+    while (newGridWidth === '' || newGridWidth < 3 || newGridWidth > 100) {
         newGridWidth = prompt ("Let's choose a number between 3 and 100 for a nice canvas :)");
     }
     
