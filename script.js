@@ -66,4 +66,22 @@ function removeGrid() {
     }
 }
 
+// Change the favicon color each time the browser is refreshed
+
+const favicon = document.querySelector('link[rel="icon"]');
+
+function changeFavicon() {
+  const randomColor = getRandomColor();
+  favicon.href = `favicon/${randomColor}.png`;
+}
+
+function getRandomColor() {
+
+  const randomNumber = Math.floor(Math.random() * 5) + 1;
+  return `color${randomNumber}`;
+}
+
+window.addEventListener('load', changeFavicon);
+
+
 
