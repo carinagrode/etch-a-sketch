@@ -31,7 +31,7 @@ function createGrid(sideSquares) {
 function resetGrid() {
     const pixels = document.querySelectorAll('.pixel');
     pixels.forEach(pixel => {
-        pixel.style.backgroundColor = 'beige';
+        pixel.style.backgroundColor = 'white';
     });
 }
 

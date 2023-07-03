@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: beige;
 }
 
 #content {
@@ -26,9 +27,9 @@ body {
 
 #new-button,
 #reset-button {
-    background-color: beige;
-    border: rgb(86, 229, 222) 5px solid;
-    color: rgb(86, 229, 222);
+    background-color: white;
+    border: black 5px solid;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -40,12 +41,12 @@ body {
 
 #new-button:hover,
 #reset-button:hover {
-    background-color: rgb(86, 229, 222);
-    color: beige;
+    background-color: black;
+    color: white;
 }
 
 #grid {
-    background-color: beige;
+    background-color: white;
     width: 640px;
     height: 640px;
     display: flex;
