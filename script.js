@@ -44,22 +44,19 @@ function resetGrid() {
     });
 }
 
-
 function createNewGrid() {
-    const newWidth = getNewGridWidth();
+    const newWidth = prompt('How many squares do you want per side?\nEnter a number between 3 and 100 :)');
+
+    if (newWidth === null) {
+        return;
+    }
+
+    while (newWidth === '' || newWidth < 3 || newWidth > 100) {
+        newWidth = prompt ("Let's choose a number between 3 and 100 for a nice canvas :)");
+    }
+
     removeGrid();
     createGrid(newWidth);
-}
-
-function getNewGridWidth() {
-    let newGridWidth = prompt('How many squares do you want per side?\nEnter a number between 3 and 100 :)');
-
-    while (newGridWidth === '' || newGridWidth < 3 || newGridWidth > 100) {
-        newGridWidth = prompt ("Let's choose a number between 3 and 100 for a nice canvas :)");
-    }
-    
-    return newGridWidth;
-    
 }
 
 function removeGrid() {
