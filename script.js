@@ -51,7 +51,7 @@ function createNewGrid() {
         return;
     }
 
-    while (newWidth === '' || newWidth < 3 || newWidth > 100) {
+    while (newWidth === '' || newWidth < 3 || newWidth > 100 || isNaN(newWidth)) {
         newWidth = prompt ("Let's choose a number between 3 and 100 for a nice canvas :)");
     }
 
