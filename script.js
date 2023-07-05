@@ -45,7 +45,7 @@ function resetGrid() {
 }
 
 function createNewGrid() {
-    const newWidth = prompt('How many squares do you want per side?\nEnter a number between 3 and 100 :)');
+    let newWidth = prompt('How many squares do you want per side?\nEnter a number between 3 and 100 :)');
 
     if (newWidth === null) {
         return;
